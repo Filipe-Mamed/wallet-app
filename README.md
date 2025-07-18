@@ -27,7 +27,7 @@ Um aplicativo mobile para gerenciar suas finanças, construído com React Native
 Antes de começar, certifique-se de ter o seguinte instalado:
 
 - Node.js (versão LTS recomendada)
-- npm or Yarn
+- npm ou Yarn
 - Expo (`npx create-expo-app` or `yarn create expo`)
 
 ### Instalação
