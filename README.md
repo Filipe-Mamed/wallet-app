@@ -28,7 +28,7 @@ Antes de começar, certifique-se de ter o seguinte instalado:
 
 - Node.js (versão LTS recomendada)
 - npm ou Yarn
-- Expo (`npx create-expo-app` or `yarn create expo`)
+- Expo (`npx create-expo-app` ou `yarn create expo`)
 
 ### Instalação
 
