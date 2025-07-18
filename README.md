@@ -26,7 +26,7 @@ Um aplicativo mobile para gerenciar suas finanças, construído com React Native
 
 Antes de começar, certifique-se de ter o seguinte instalado:
 
-- Node.js (LTS version recommended)
+- Node.js (versão LTS recomendada)
 - npm or Yarn
 - Expo (`npx create-expo-app` or `yarn create expo`)
 
@@ -39,7 +39,7 @@ Antes de começar, certifique-se de ter o seguinte instalado:
    cd wallet-app
    ```
 
-2. **Install dependencies:**
+2. **Instale as dependências:**
 
    ```bash
    npm install
