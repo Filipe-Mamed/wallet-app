@@ -35,7 +35,7 @@ Antes de começar, certifique-se de ter o seguinte instalado:
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/your-username/wallet-app.git
+   git clone https://github.com/Filipe-Mamed/wallet-app.git
    cd wallet-app
    ```
 
