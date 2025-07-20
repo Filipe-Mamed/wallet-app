@@ -23,7 +23,7 @@ export const styles = StyleSheet.create({
   description: {
     color: "black",
     fontFamily: Fonts.Poppins_Light,
-    marginTop: RFValue(60),
+    marginTop: RFValue(50),
     fontSize: RFValue(15)
   },
   buttonGroup: {
@@ -33,10 +33,31 @@ export const styles = StyleSheet.create({
   },
   main:{
     gap: RFValue(10),
+    marginTop: RFValue(20),
   },
-  div:{
-     marginTop: RFValue(10),
+  buttonEntrar:{
+     marginTop: RFValue(20),
      gap: RFValue(10),
   },
-  footer:{}
+  footer:{
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: RFValue(100),
+    gap: RFValue(5),
+  },
+  buttonFooter:{
+    width: "auto",
+    fontSize: RFValue(16),
+    fontFamily: Fonts.Poppins_Regular,
+    color: "#0000FF",
+    textDecorationLine: "underline",
+    textDecorationColor: "#0000FF",
+  },
+  textFooter:{
+    fontSize: RFValue(16),
+    fontFamily: Fonts.Poppins_Regular,
+    color: "#808080"
+  }
 });
