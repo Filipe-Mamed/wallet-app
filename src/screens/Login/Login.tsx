@@ -49,11 +49,14 @@ export function Login() {
             leftImg={require("../../assets/imgs/InputsImgs/trancar.png")}
             rightImg={require("../../assets/imgs/InputsImgs/olho-aberto.png")}
           />
-          <View style={styles.div}>
+          <View style={styles.buttonEntrar}>
             <Button variant="purple" children="Entrar" onPress={() => {}} />
           </View>
         </Form>
-        <View style={styles.footer}></View>
+        <View style={styles.footer}>
+          <Text style={styles.textFooter}>Não tem cadastro ainda?</Text>
+          <Button variant="transparent" children="Cadastre-se" onPress={() => {}} style={styles.buttonFooter}/>
+        </View>
       </View>
     </TouchableWithoutFeedback>
   );
