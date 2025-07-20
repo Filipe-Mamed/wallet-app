@@ -3,6 +3,7 @@ import { styles } from "./Login.Styled";
 import {
   ButtonSocialGoogle,
   ButtonSocialFacebook,
+  Button,
 } from "../../shared/components";
 import { Form } from "@unform/mobile";
 import { FormHandles } from "@unform/core";
@@ -30,30 +31,30 @@ export function Login() {
           </View>
         </View>
         <Form ref={formRef} onSubmit={handleSubmit} style={styles.main}>
-          <Input name="Email" placeholder="Usuário"
+          <Input
+            name="usuario"
+            placeholder="Usuário"
+            keyboardType="default"
+            autoCapitalize="none"
+            autoCorrect={false}
             leftImg={require("../../assets/imgs/InputsImgs/do-utilizador.png")}
           />
-          <Input name="Senha" placeholder="Senha" secureTextEntry
+          <Input
+            name="senha"
+            placeholder="Senha"
+            keyboardType="default"
+            autoCapitalize="none"
+            autoCorrect={false}
+            showPasswordToggle
             leftImg={require("../../assets/imgs/InputsImgs/trancar.png")}
-            rightImg={require("../../assets/imgs/InputsImgs/olho-fechado.png")}
+            rightImg={require("../../assets/imgs/InputsImgs/olho-aberto.png")}
           />
+          <View style={styles.div}>
+            <Button variant="purple" children="Entrar" onPress={() => {}} />
+          </View>
         </Form>
         <View style={styles.footer}></View>
       </View>
     </TouchableWithoutFeedback>
   );
-}
-
-{
-  /* <Input
-            name="Email"
-            placeholder="Email"
-            source={require("../../assets/imgs/InputsImgs/do-utilizador.png")}
-          ></Input>
-          <Input
-            name="Senha"
-            placeholder="Senha"
-            source={require("../../assets/imgs/InputsImgs/trancar.png")}
-            secureTextEntry={true}
-          ></Input> */
 }
