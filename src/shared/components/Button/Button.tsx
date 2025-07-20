@@ -1,0 +1,58 @@
+import React from "react";
+import {
+  View,
+  ViewProps,
+  Text,
+  Image,
+  Pressable,
+  ImageProps,
+  ActivityIndicator,
+} from "react-native";
+import { styles } from "./Button.Styled";
+import { variants } from "./ButtonVariant";
+
+interface IButtonProps {
+  children?: React.ReactNode;
+  onPress: () => void;
+  imgIcon?: ImageProps;
+  isLoading?: boolean;
+  disabled?: boolean;
+  variant?: "purple" | "outline" | "black" | "transparent";
+  style?: ViewProps["style"]
+}
+
+export function Button({
+  children,
+  onPress,
+  imgIcon,
+  isLoading,
+  disabled,
+  variant = "purple",
+  style,
+}: IButtonProps) {
+  const color = "#808080";
+  const button_variant = variants[variant];
+  const button_styles = disabled
+    ? button_variant.disabled
+    : button_variant.enabled;
+
+
+  return (
+    <Pressable
+      disabled={isLoading || disabled}
+      onPress={onPress}
+      style={({pressed})=>[button_styles.button, styles.container, style, pressed && {opacity: 0.6}]}
+    >
+      {isLoading ? (
+        <ActivityIndicator size="small" color={color}></ActivityIndicator>
+      ) : (
+        <View style={[styles.content, !children && { justifyContent: "center" }]}>
+          {imgIcon && (<Image resizeMode="contain" source={imgIcon} style={[button_styles.img, children ? button_styles.img : styles.iconImg]} />)}
+          {children && (
+            <Text style={[button_styles.title, styles.text,]}>{children}</Text>
+          )}
+        </View>
+      )}
+    </Pressable>
+  );
+}
