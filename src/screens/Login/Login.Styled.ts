@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   header: {
     padding: RFValue(20),
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "space-between"
   },
   title: {
     color: "black",
@@ -33,6 +33,10 @@ export const styles = StyleSheet.create({
   },
   main:{
     gap: RFValue(10),
+  },
+  div:{
+     marginTop: RFValue(10),
+     gap: RFValue(10),
   },
   footer:{}
 });
