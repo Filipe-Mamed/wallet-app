@@ -49,7 +49,7 @@ export function Button({
         <View style={[styles.content, !children && { justifyContent: "center" }]}>
           {imgIcon && (<Image resizeMode="contain" source={imgIcon} style={[button_styles.img, children ? button_styles.img : styles.iconImg]} />)}
           {children && (
-            <Text style={[button_styles.title, styles.text,]}>{children}</Text>
+            <Text style={[button_styles.title, styles.text, style]}>{children}</Text>
           )}
         </View>
       )}
