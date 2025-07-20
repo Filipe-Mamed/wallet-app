@@ -5,7 +5,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 export const styles = StyleSheet.create({
   button: {
     backgroundColor: "#4368C7",
-    width: RFValue(130),
+    width: RFValue(140),
     height: RFValue(60),
     borderRadius: RFValue(13),
     alignItems: "center",
