@@ -4,7 +4,6 @@ import {RFValue} from "react-native-responsive-fontsize"
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: "#F8F8FF",
     padding: RFValue(13)
   },
@@ -39,12 +38,25 @@ export const styles = StyleSheet.create({
      marginTop: RFValue(20),
      gap: RFValue(10),
   },
+  footerGroup:{
+    gap: RFValue(15),
+    justifyContent: "center",
+    alignItems: "center",
+
+  },
+  forgotPassword:{
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: RFValue(5),
+    marginTop: RFValue(40),
+
+  },
   footer:{
     width: "100%",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: RFValue(100),
     gap: RFValue(5),
   },
   buttonFooter:{
@@ -59,5 +71,8 @@ export const styles = StyleSheet.create({
     fontSize: RFValue(16),
     fontFamily: Fonts.Poppins_Regular,
     color: "#808080"
+  },
+  textFooterGroup:{
+    flexDirection: "column"
   }
 });
