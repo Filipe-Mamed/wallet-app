@@ -5,7 +5,7 @@ import { Fonts } from "../../styles";
 export const styles = StyleSheet.create({
   container: {
     width: "100%",
-    height: RFValue(50),
+    height: RFValue(58),
     padding: RFValue(13),
     justifyContent: "center",
     borderRadius: RFValue(8),
@@ -18,8 +18,8 @@ export const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    height: RFValue(45),
-    fontSize: RFValue(14),
+    height: RFValue(50),
+    fontSize: RFValue(16),
     fontFamily: Fonts.Poppins_Regular,
     color: "#000000",
     marginTop: RFValue(4),
