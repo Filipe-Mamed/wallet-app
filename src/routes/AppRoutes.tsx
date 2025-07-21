@@ -1,10 +1,7 @@
 import React from "react";
-import { Text, View } from "react-native";
+
+import { AuthRoutes } from "./AuthRoutes";
 
 export function AppRoutes() {
-  return (
-    <View>
-      <Text>App Routes</Text>
-    </View>
-  );
+  return <AuthRoutes/>
 }
