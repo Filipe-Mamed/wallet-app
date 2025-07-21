@@ -1,17 +1,20 @@
 import { StatusBar } from "expo-status-bar";
 import { FontProvider } from "../shared/contexts";
-import { Login } from "../screens/Login";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
+import {NavigationContainer} from "@react-navigation/native"
+import {AppRoutes} from "../routes"
 export default function App() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <NavigationContainer>
+      <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaView style={{ flex: 1 }}>
         <FontProvider>
           <StatusBar style="auto" translucent />
-          <Login />
+          <AppRoutes/>
         </FontProvider>
       </SafeAreaView>
     </GestureHandlerRootView>
+    </NavigationContainer>
   );
 }
