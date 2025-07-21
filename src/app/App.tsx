@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { FontProvider } from "../shared/contexts";
-import { Login } from "../screens/Login/Login";
+import { Login } from "../screens/Login";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 export default function App() {
