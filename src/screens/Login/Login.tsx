@@ -16,13 +16,20 @@ import { FormHandles } from "@unform/core";
 import { useCallback, useRef } from "react";
 import { Input } from "../../shared/components/Input/Input";
 import { ForgotPassword } from "./components/ForgotPassword";
+import { useNavigation } from "@react-navigation/native";
 
 export function Login() {
   const formRef = useRef<FormHandles>(null);
+  const navigate = useNavigation()
 
   const handleSubmit = useCallback((data: any) => {
     console.log(data);
   }, []);
+
+  const handleRegister = () => {
+    navigate.navigate("Register")
+  }
+
 
   return (
     <KeyboardAvoidingView behavior="position" enabled>
@@ -70,7 +77,7 @@ export function Login() {
               <Button
                 variant="transparent"
                 children="Cadastre-se"
-                onPress={() => {}}
+                onPress={handleRegister}
                 style={styles.buttonFooter}
               />
             </View>
