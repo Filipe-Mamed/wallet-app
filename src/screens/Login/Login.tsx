@@ -20,14 +20,14 @@ import { useNavigation } from "@react-navigation/native";
 
 export function Login() {
   const formRef = useRef<FormHandles>(null);
-  const navigate = useNavigation()
+  const navigation = useNavigation()
 
   const handleSubmit = useCallback((data: any) => {
     console.log(data);
   }, []);
 
   const handleRegister = () => {
-    navigate.navigate("Register")
+    navigation.navigate("Register")
   }
 
 
