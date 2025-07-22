@@ -30,6 +30,9 @@ export function Login() {
     navigation.navigate("Register")
   }
 
+  const handleForgotPassword = () => {
+    navigation.navigate("RecoverPassword")
+  }
 
   return (
     <KeyboardAvoidingView behavior="position" enabled>
@@ -70,7 +73,7 @@ export function Login() {
           </Form>
           <View style={styles.footerGroup}>
             <View style={styles.forgotPassword}>
-              <ForgotPassword />
+              <ForgotPassword onPress={handleForgotPassword} />
             </View>
             <View style={styles.footer}>
               <Text style={styles.textFooter}>Não tem cadastro ainda?</Text>
