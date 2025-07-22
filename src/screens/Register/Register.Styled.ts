@@ -4,6 +4,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
   $container: {
+    height: "100%",
     backgroundColor: "#F8F8FF",
     padding: RFValue(13),
   },

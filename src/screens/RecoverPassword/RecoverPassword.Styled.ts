@@ -4,6 +4,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
   $container: {
+    height: "100%",
     backgroundColor: "#F8F8FF",
     padding: RFValue(13),
     alignItems: "center",
@@ -33,6 +34,7 @@ const styles = StyleSheet.create({
     marginTop: RFValue(20),
     gap: RFValue(25),
     width: "100%",
+    marginBottom: RFValue(100),
   },
   $footer: {
     flexDirection: "row",
@@ -40,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: RFValue(5),
     marginTop: RFValue(40),
-    marginBottom: RFValue(180),
+    
   },
   $textFooter: {
     fontSize: RFValue(16),
