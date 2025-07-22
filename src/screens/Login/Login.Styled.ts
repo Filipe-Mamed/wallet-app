@@ -2,67 +2,67 @@ import { StyleSheet } from "react-native";
 import { Fonts } from "../../shared/styles";
 import { RFValue } from "react-native-responsive-fontsize";
 
-export const styles = StyleSheet.create({
-  container: {
+const styles = StyleSheet.create({
+  $container: {
     backgroundColor: "#F8F8FF",
     padding: RFValue(13),
   },
-  header: {
+  $header: {
     padding: RFValue(20),
     alignItems: "center",
     justifyContent: "space-between",
   },
-  title: {
+  $title: {
     color: "black",
     fontFamily: Fonts.Poppins_Medium,
     marginTop: RFValue(40),
     fontSize: RFValue(25),
     textAlign: "center",
   },
-  description: {
+  $description: {
     color: "black",
     fontFamily: Fonts.Poppins_Light,
     marginTop: RFValue(50),
     fontSize: RFValue(15),
   },
-  buttonGroup: {
+  $buttonGroup: {
     flexDirection: "row",
     gap: RFValue(20),
     marginTop: RFValue(15),
   },
-  main: {
+  $main: {
     gap: RFValue(10),
     marginTop: RFValue(20),
   },
-  buttonEntrar: {
+  $buttonEntrar: {
     marginTop: RFValue(20),
     gap: RFValue(10),
   },
-  footerGroup: {
+  $footerGroup: {
     gap: RFValue(9),
     justifyContent: "center",
     alignItems: "center",
   },
-  forgotPassword: {
+  $forgotPassword: {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     gap: RFValue(5),
     marginTop: RFValue(40),
   },
-  footer: {
+  $footer: {
     width: "100%",
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
     gap: RFValue(5),
   },
-  textFooter: {
+  $textFooter: {
     fontSize: RFValue(16),
     fontFamily: Fonts.Poppins_Regular,
     color: "#808080",
   },
-  buttonFooter: {
+  $buttonFooter: {
     width: "auto",
     fontSize: RFValue(16),
     fontFamily: Fonts.Poppins_Regular,
@@ -71,3 +71,18 @@ export const styles = StyleSheet.create({
     textDecorationColor: "#0000FF",
   },
 });
+
+export const {
+  $container,
+  $header,
+  $title,
+  $description,
+  $buttonGroup,
+  $main,
+  $buttonEntrar,
+  $footerGroup,
+  $forgotPassword,
+  $footer,
+  $textFooter,
+  $buttonFooter,
+} = styles;

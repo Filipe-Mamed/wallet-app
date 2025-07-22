@@ -8,7 +8,7 @@ import {
   ImageProps,
   ActivityIndicator,
 } from "react-native";
-import { styles } from "./Button.Styled";
+import { $container, $content, $iconImg, $text } from "./Button.Styled";
 import { variants } from "./ButtonVariant";
 
 interface IButtonProps {
@@ -18,7 +18,7 @@ interface IButtonProps {
   isLoading?: boolean;
   disabled?: boolean;
   variant?: "purple" | "outline" | "black" | "transparent";
-  style?: ViewProps["style"]
+  style?: ViewProps["style"];
 }
 
 export function Button({
@@ -36,20 +36,33 @@ export function Button({
     ? button_variant.disabled
     : button_variant.enabled;
 
-
   return (
     <Pressable
       disabled={isLoading || disabled}
       onPress={onPress}
-      style={({pressed})=>[button_styles.button, styles.container, style, pressed && {opacity: 0.6}]}
+      style={({ pressed }) => [
+        button_styles.button,
+        $container,
+        style,
+        pressed && { opacity: 0.6 },
+      ]}
     >
       {isLoading ? (
         <ActivityIndicator size="small" color={color}></ActivityIndicator>
       ) : (
-        <View style={[styles.content, !children && { justifyContent: "center" }]}>
-          {imgIcon && (<Image resizeMode="contain" source={imgIcon} style={[button_styles.img, children ? button_styles.img : styles.iconImg]} />)}
+        <View style={[$content, !children && { justifyContent: "center" }]}>
+          {imgIcon && (
+            <Image
+              resizeMode="contain"
+              source={imgIcon}
+              style={[
+                button_styles.img,
+                children ? button_styles.img : $iconImg,
+              ]}
+            />
+          )}
           {children && (
-            <Text style={[button_styles.title, styles.text, style]}>{children}</Text>
+            <Text style={[button_styles.title, $text, style]}>{children}</Text>
           )}
         </View>
       )}

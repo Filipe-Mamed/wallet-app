@@ -6,17 +6,16 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import {
-  Container,
-  Header,
-  Title,
-  Description,
-  Body,
-  Footer,
-  TextFooter,
-  ButtonFooter,
+  $container,
+  $header,
+  $title,
+  $description,
+  $body,
+  $footer,
+  $textFooter,
+  $buttonFooter,
 } from "./RecoverPassword.Styled";
-import { Input } from "../../shared/components/Input/Input";
-import { Button } from "../../shared/components";
+import { Input, Button } from "../../shared/components";
 import { useNavigation } from "@react-navigation/native";
 
 export function RecoverPassword() {
@@ -29,14 +28,14 @@ export function RecoverPassword() {
   return (
     <KeyboardAvoidingView behavior="position" enabled>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={Container}>
-          <View style={Header}>
-            <Text style={Title}>Esqueceu sua senha?</Text>
-            <Text style={Description}>
+        <View style={$container}>
+          <View style={$header}>
+            <Text style={$title}>Esqueceu sua senha?</Text>
+            <Text style={$description}>
               Informe o e-mail cadastrado para redefinir sua senha.
             </Text>
           </View>
-          <View style={Body}>
+          <View style={$body}>
             <Input
               name="email"
               placeholder="Email"
@@ -47,10 +46,10 @@ export function RecoverPassword() {
             />
             <Button variant="purple" children="Enviar" onPress={() => {}} />
           </View>
-          <View style={Footer}>
-            <Text style={TextFooter}>Lembrou a senha?</Text>
+          <View style={$footer}>
+            <Text style={$textFooter}>Lembrou a senha?</Text>
             <Button
-              style={ButtonFooter}
+              style={$buttonFooter}
               variant="transparent"
               children="Fazer login"
               onPress={handleBackLogin}

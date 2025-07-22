@@ -6,9 +6,18 @@ import {
   TouchableWithoutFeedback,
   ScrollView,
 } from "react-native";
-import { styles } from "./Register.Styled";
-import { Button } from "../../shared/components";
-import { Input } from "../../shared/components/Input/Input";
+import {
+  $container,
+  $header,
+  $title,
+  $description,
+  $main,
+  $buttonEntrar,
+  $footer,
+  $textFooter,
+  $buttonFooter,
+} from "./Register.Styled";
+import { Input, Button } from "../../shared/components";
 import { useNavigation } from "@react-navigation/native";
 
 export function Register() {
@@ -21,15 +30,15 @@ export function Register() {
   return (
     <KeyboardAvoidingView behavior="position" enabled>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={styles.container}>
-          <View style={styles.header}>
-            <Text style={styles.title}>
+        <View style={$container}>
+          <View style={$header}>
+            <Text style={$title}>
               Ao se registrar, sinta imediatamente a facilidade de realizar
               transações.
             </Text>
-            <Text style={styles.description}>Cadastre-se</Text>
+            <Text style={$description}>Cadastre-se</Text>
           </View>
-          <View style={styles.main}>
+          <View style={$main}>
             <Input
               name="nome"
               placeholder="Nome"
@@ -57,13 +66,13 @@ export function Register() {
               rightImg={require("../../assets/imgs/InputsImgs/olho-aberto.png")}
             />
           </View>
-          <View style={styles.buttonEntrar}>
+          <View style={$buttonEntrar}>
             <Button variant="purple" children="Cadastrar" onPress={() => {}} />
           </View>
-          <View style={styles.footer}>
-            <Text style={styles.textFooter}>Já tem cadastro?</Text>
+          <View style={$footer}>
+            <Text style={$textFooter}>Já tem cadastro?</Text>
             <Button
-              style={styles.buttonFooter}
+              style={$buttonFooter}
               variant="transparent"
               children="Entrar"
               onPress={handleLogin}

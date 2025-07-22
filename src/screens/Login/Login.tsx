@@ -5,50 +5,61 @@ import {
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
 } from "react-native";
-import { styles } from "./Login.Styled";
+import {
+  $container,
+  $header,
+  $title,
+  $description,
+  $buttonGroup,
+  $main,
+  $buttonEntrar,
+  $footerGroup,
+  $forgotPassword,
+  $footer,
+  $textFooter,
+  $buttonFooter,
+} from "./Login.Styled";
 import {
   ButtonSocialGoogle,
   ButtonSocialFacebook,
   Button,
+  Input
 } from "../../shared/components";
 import { Form } from "@unform/mobile";
 import { FormHandles } from "@unform/core";
 import { useCallback, useRef } from "react";
-import { Input } from "../../shared/components/Input/Input";
-import { ForgotPassword } from "./components/ForgotPassword";
+import { ForgotPassword } from "./components/ForgotPassword/ForgotPassword";
 import { useNavigation } from "@react-navigation/native";
 
 export function Login() {
   const formRef = useRef<FormHandles>(null);
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   const handleSubmit = useCallback((data: any) => {
     console.log(data);
   }, []);
 
   const handleRegister = () => {
-    navigation.navigate("Register")
-  }
+    navigation.navigate("Register");
+  };
 
   const handleForgotPassword = () => {
-    navigation.navigate("RecoverPassword")
-  }
+    navigation.navigate("RecoverPassword");
+  };
 
   return (
     <KeyboardAvoidingView behavior="position" enabled>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={styles.container}>
-          <View style={styles.header}>
-            <Text style={styles.title}>
-              Seja bem-vindo(a) {"\n"} a App Carteira
-            </Text>
-            <Text style={styles.description}>Entrar com</Text>
-            <View style={styles.buttonGroup}>
+        <View style={$container}>
+          <View style={$header}>
+            <Text style={$title}>Seja bem-vindo(a) {"\n"} a App Carteira</Text>
+            <Text style={$description}>Entrar com</Text>
+            <View style={$buttonGroup}>
               <ButtonSocialGoogle title="Google" />
               <ButtonSocialFacebook title="Facebook" />
             </View>
           </View>
-          <Form ref={formRef} onSubmit={handleSubmit} style={styles.main}>
+          <Form style={$main} ref={formRef} onSubmit={handleSubmit}>
             <Input
               name="usuario"
               placeholder="Usuário"
@@ -67,21 +78,21 @@ export function Login() {
               leftImg={require("../../assets/imgs/InputsImgs/trancar.png")}
               rightImg={require("../../assets/imgs/InputsImgs/olho-aberto.png")}
             />
-            <View style={styles.buttonEntrar}>
+            <View style={$buttonEntrar}>
               <Button variant="purple" children="Entrar" onPress={() => {}} />
             </View>
           </Form>
-          <View style={styles.footerGroup}>
-            <View style={styles.forgotPassword}>
+          <View style={$footerGroup}>
+            <View style={$forgotPassword}>
               <ForgotPassword onPress={handleForgotPassword} />
             </View>
-            <View style={styles.footer}>
-              <Text style={styles.textFooter}>Não tem cadastro ainda?</Text>
+            <View style={$footer}>
+              <Text style={$textFooter}>Não tem cadastro ainda?</Text>
               <Button
+                style={$buttonFooter}
                 variant="transparent"
                 children="Cadastre-se"
                 onPress={handleRegister}
-                style={styles.buttonFooter}
               />
             </View>
           </View>

@@ -7,7 +7,7 @@ import {
   TextInputProps,
   TouchableOpacity,
 } from "react-native";
-import { styles } from "./Input.Styled";
+import { $container, $inputContainer, $input, $inputImg } from "./Input.Styled";
 
 interface IInputProps extends TextInputProps {
   name: string;
@@ -31,24 +31,20 @@ export function Input({
 
   const trueOrFalse = useCallback((): ImageSourcePropType => {
     if (security) {
-      return require("../../../assets/imgs/InputsImgs/olho-fechado.png")
+      return require("../../../assets/imgs/InputsImgs/olho-fechado.png");
     } else {
-      return require("../../../assets/imgs/InputsImgs/olho-aberto.png")
+      return require("../../../assets/imgs/InputsImgs/olho-aberto.png");
     }
-  }, [security])
+  }, [security]);
 
   return (
-    <View style={styles.container}>
-      <View style={styles.inputContainer}>
+    <View style={$container}>
+      <View style={$inputContainer}>
         {leftImg && (
-          <Image
-            resizeMode="contain"
-            style={styles.inputImg}
-            source={leftImg}
-          />
+          <Image resizeMode="contain" style={$inputImg} source={leftImg} />
         )}
         <TextInput
-          style={styles.input}
+          style={$input}
           placeholderTextColor="#808080"
           secureTextEntry={security}
           {...rest}
@@ -58,7 +54,7 @@ export function Input({
             {rightImg && (
               <Image
                 resizeMode="contain"
-                style={styles.inputImg}
+                style={$inputImg}
                 source={trueOrFalse()}
               />
             )}

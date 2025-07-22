@@ -2,8 +2,8 @@ import { StyleSheet } from "react-native";
 import { Fonts } from "../../styles";
 import { RFValue } from "react-native-responsive-fontsize";
 
-export const styles = StyleSheet.create({
-  button: {
+const styles = StyleSheet.create({
+  $button: {
     backgroundColor: "#FFFFFF",
     width: RFValue(140),
     height: RFValue(60),
@@ -13,7 +13,6 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     gap: RFValue(10),
 
-
     // Sombra iOS
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -22,14 +21,16 @@ export const styles = StyleSheet.create({
     //   // Sombra Android
     elevation: 5,
   },
-  buttonImg:{
+  $buttonImg: {
     width: RFValue(25),
     height: RFValue(25),
   },
-  buttonText: {
+  $buttonText: {
     color: "#696969",
     fontSize: RFValue(16),
     fontFamily: Fonts.Poppins_Light,
     marginTop: RFValue(3),
   },
 });
+
+export const { $button, $buttonImg, $buttonText } = styles;
