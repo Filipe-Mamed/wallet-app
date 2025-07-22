@@ -23,7 +23,7 @@ import {
   ButtonSocialGoogle,
   ButtonSocialFacebook,
   Button,
-  Input
+  Input,
 } from "../../shared/components";
 import { Form } from "@unform/mobile";
 import { FormHandles } from "@unform/core";
