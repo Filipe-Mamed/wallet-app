@@ -5,12 +5,12 @@ import {
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
 } from "react-native";
-import {$container} from "./Notification.Styled"
+import { $container, $text } from "./Notification.Styled";
 
-export function Notification(){
-    return(
-        <View style={$container}>
-            <Text>Notification</Text>
-        </View>
-    )
+export function Notification() {
+  return (
+    <View style={$container}>
+      <Text style={$text}>Notification</Text>
+    </View>
+  );
 }

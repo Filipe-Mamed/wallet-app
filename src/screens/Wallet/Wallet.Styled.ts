@@ -4,16 +4,14 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
   $container: {
-    backgroundColor: "blue",
-  },
-  $header:{
-    backgroundColor: "black"
+    height: "100%",
+    backgroundColor: "black",
   },
   $text: {
-    marginTop: RFValue(0),
-    color: "blue",
-    
+    textAlign: "center",
+    marginTop: RFValue(300),
+    color: "white",
   },
 });
 
-export const { $container, $header, $text } = styles;
+export const { $container, $text } = styles;

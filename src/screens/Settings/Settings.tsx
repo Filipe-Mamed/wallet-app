@@ -5,12 +5,12 @@ import {
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
 } from "react-native";
-import {$container} from "./Settings.Styled"
+import {$container, $text} from "./Settings.Styled"
 
 export function Settings(){
     return(
         <View style={$container}>
-            <Text>Settings</Text>
+            <Text style={$text}>Settings</Text>
         </View>
     )
 }
