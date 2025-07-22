@@ -2,8 +2,13 @@ import { StyleSheet } from "react-native";
 import { Fonts } from "../../../../shared/styles";
 import { RFValue } from "react-native-responsive-fontsize";
 
-export const styles = StyleSheet.create({
-  buttonForgotPassword: {
+const styles = StyleSheet.create({
+  $textForgotPassword: {
+    fontSize: RFValue(14),
+    fontFamily: Fonts.Poppins_Regular,
+    color: "#808080",
+  },
+  $buttonForgotPassword: {
     width: "auto",
     fontSize: RFValue(14),
     fontFamily: Fonts.Poppins_Regular,
@@ -11,9 +16,6 @@ export const styles = StyleSheet.create({
     textDecorationLine: "underline",
     textDecorationColor: "#0000FF",
   },
-  textForgotPassword: {
-    fontSize: RFValue(14),
-    fontFamily: Fonts.Poppins_Regular,
-    color: "#808080",
-  },
 });
+
+export const { $textForgotPassword, $buttonForgotPassword } = styles;
