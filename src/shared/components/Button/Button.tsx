@@ -11,10 +11,15 @@ import {
 import { $container, $content, $iconImg, $text } from "./Button.Styled";
 import { variants } from "./ButtonVariant";
 
+interface IImageIcon {
+  source: ImageProps["source"];
+  style?: ImageProps["style"];
+}
+
 interface IButtonProps {
   children?: React.ReactNode;
   onPress: () => void;
-  imgIcon?: ImageProps;
+  imgIcon?: IImageIcon
   isLoading?: boolean;
   disabled?: boolean;
   variant?: "purple" | "outline" | "black" | "transparent";
@@ -54,10 +59,10 @@ export function Button({
           {imgIcon && (
             <Image
               resizeMode="contain"
-              source={imgIcon}
+              source={imgIcon.source}
               style={[
                 button_styles.img,
-                children ? button_styles.img : $iconImg,
+                children ? button_styles.img : $iconImg, imgIcon.style
               ]}
             />
           )}
