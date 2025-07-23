@@ -5,12 +5,11 @@ import { RFValue } from "react-native-responsive-fontsize";
 const styles = StyleSheet.create({
   $container: {
     height: "100%",
-    backgroundColor: "black",
+    backgroundColor: "#F8F8FF",
   },
   $text: {
     textAlign: "center",
     marginTop: RFValue(300),
-    color: "white",
   },
 });
 
