@@ -29,10 +29,17 @@ export function TabRoutes() {
           borderRadius: 25,
           height: 60,
 
-          // Remove borda padrão (linha branca)
-          borderTopWidth: 0,
-          borderWidth: 0,
-          paddingTop: RFValue(3)
+          // Sombra no Android
+          elevation: 10,
+
+          // Sombra no IOS
+          shadowColor: "#000",
+          shadowOffset: {
+            width: 0,
+            height: 10,
+          },
+          shadowOpacity: 0.25,
+          shadowRadius: 3.5,
         },
         tabBarLabelStyle: {
           fontSize: RFValue(11),
