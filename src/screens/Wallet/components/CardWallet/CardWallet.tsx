@@ -20,7 +20,7 @@ export function CardWallet() {
         </View>
         <View style={$contentCard}>
           <Text style={$card}>Cartão</Text>
-          <Text style={$flag}>MasterCard</Text>
+          <Text style={$flag}>G2bank</Text>
         </View>
       </View>
     </View>
