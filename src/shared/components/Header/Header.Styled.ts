@@ -22,6 +22,11 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.Poppins_Bold,
     fontSize: RFValue(19),
   },
+  $appNameRight: {
+    fontFamily: Fonts.Poppins_Bold,
+    fontSize: RFValue(19),
+    marginRight: RFValue(50),
+  },
   $status: {
     fontFamily: Fonts.Poppins_Medium,
     color: "#808080",
@@ -35,5 +40,6 @@ export const {
   $header,
   $avatar,
   $appName,
+  $appNameRight,
   $status,
 } = styles;
