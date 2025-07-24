@@ -17,12 +17,8 @@ export function Wallet() {
   return (
     <View style={$container}>
       <Header
-        name="Carteira"
+        nameLeft="Carteira"
         status="Ativo"
-        // imgBack={{
-        //   source: require("../../assets/imgs/botão-voltar.png"),
-        //   style: { tintColor: "#4B0082", width: 43, height: 43 },
-        // }}
         avatar={FotoIlustrativa}
       />
       <View style={$contentCard}>

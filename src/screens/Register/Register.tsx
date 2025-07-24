@@ -20,6 +20,11 @@ import {
 import { Input, Button } from "../../shared/components";
 import { useNavigation } from "@react-navigation/native";
 
+import User from "../../assets/imgs/InputsImgs/do-utilizador.png"
+import Email from "../../assets/imgs/InputsImgs/e-mail.png"
+import Lock from "../../assets/imgs/InputsImgs/trancar.png"
+import OpenEye from "../../assets/imgs/InputsImgs/olho-aberto.png"
+
 export function Register() {
   const navigation = useNavigation();
 
@@ -45,7 +50,7 @@ export function Register() {
               keyboardType="default"
               autoCapitalize="none"
               autoCorrect={false}
-              leftImg={require("../../assets/imgs/InputsImgs/do-utilizador.png")}
+              leftImg={User}
             />
             <Input
               name="email"
@@ -53,7 +58,7 @@ export function Register() {
               keyboardType="email-address"
               autoCapitalize="none"
               autoCorrect={false}
-              leftImg={require("../../assets/imgs/InputsImgs/e-mail.png")}
+              leftImg={Email}
             />
             <Input
               name="senha"
@@ -62,8 +67,8 @@ export function Register() {
               autoCapitalize="none"
               autoCorrect={false}
               showPasswordToggle
-              leftImg={require("../../assets/imgs/InputsImgs/trancar.png")}
-              rightImg={require("../../assets/imgs/InputsImgs/olho-aberto.png")}
+              leftImg={Lock}
+              rightImg={OpenEye}
             />
           </View>
           <View style={$buttonEntrar}>

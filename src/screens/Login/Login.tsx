@@ -31,6 +31,11 @@ import { useCallback, useRef } from "react";
 import { ForgotPassword } from "./components/ForgotPassword/ForgotPassword";
 import { useNavigation } from "@react-navigation/native";
 
+import User from "../../assets/imgs/InputsImgs/do-utilizador.png"
+import Lock from "../../assets/imgs/InputsImgs/trancar.png"
+import OpenEye from "../../assets/imgs/InputsImgs/olho-aberto.png"
+
+
 export function Login() {
   const formRef = useRef<FormHandles>(null);
   const navigation = useNavigation();
@@ -66,7 +71,7 @@ export function Login() {
               keyboardType="default"
               autoCapitalize="none"
               autoCorrect={false}
-              leftImg={require("../../assets/imgs/InputsImgs/do-utilizador.png")}
+              leftImg={User}
             />
             <Input
               name="senha"
@@ -75,8 +80,8 @@ export function Login() {
               autoCapitalize="none"
               autoCorrect={false}
               showPasswordToggle
-              leftImg={require("../../assets/imgs/InputsImgs/trancar.png")}
-              rightImg={require("../../assets/imgs/InputsImgs/olho-aberto.png")}
+              leftImg={Lock}
+              rightImg={OpenEye}
             />
             <View style={$buttonEntrar}>
               <Button variant="purple" children="Entrar" onPress={() => {}} />

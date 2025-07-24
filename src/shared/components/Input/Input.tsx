@@ -9,6 +9,9 @@ import {
 } from "react-native";
 import { $container, $inputContainer, $input, $inputImg } from "./Input.Styled";
 
+import OpenEye from "../../../assets/imgs/InputsImgs/olho-aberto.png";
+import EyeClosed from "../../../assets/imgs/InputsImgs/olho-fechado.png";
+
 interface IInputProps extends TextInputProps {
   name: string;
   leftImg?: ImageSourcePropType;
@@ -31,9 +34,9 @@ export function Input({
 
   const trueOrFalse = useCallback((): ImageSourcePropType => {
     if (security) {
-      return require("../../../assets/imgs/InputsImgs/olho-fechado.png");
+      return EyeClosed;
     } else {
-      return require("../../../assets/imgs/InputsImgs/olho-aberto.png");
+      return OpenEye;
     }
   }, [security]);
 

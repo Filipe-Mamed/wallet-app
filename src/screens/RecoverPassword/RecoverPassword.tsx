@@ -18,6 +18,8 @@ import {
 import { Input, Button } from "../../shared/components";
 import { useNavigation } from "@react-navigation/native";
 
+import Email from "../../assets/imgs/InputsImgs/e-mail.png";
+
 export function RecoverPassword() {
   const navigation = useNavigation();
 
@@ -42,7 +44,7 @@ export function RecoverPassword() {
               keyboardType="email-address"
               autoCapitalize="none"
               autoCorrect={false}
-              leftImg={require("../../assets/imgs/InputsImgs/e-mail.png")}
+              leftImg={Email}
             />
             <Button variant="purple" children="Enviar" onPress={() => {}} />
           </View>

@@ -4,6 +4,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { RFValue } from "react-native-responsive-fontsize";
 import { Fonts } from "../shared/styles";
 
+import _Home from "../assets/imgs/TabImg/home.png"
+import _Stats from "../assets/imgs/TabImg/stats.png"
+import _Notification from "../assets/imgs/TabImg/notification.png"
+import _Settings from "../assets/imgs/TabImg/settings.png"
+
 import { Wallet } from "../screens/Wallet";
 import { Stats } from "../screens/Stats";
 import { Notification } from "../screens/Notification";
@@ -59,7 +64,7 @@ export function TabRoutes() {
           },
           tabBarIcon: ({ focused }) => (
             <Image
-              source={require("../assets/imgs/TabImg/home.png")}
+              source={_Home}
               resizeMode="contain"
               style={{
                 width: 24,
@@ -77,7 +82,7 @@ export function TabRoutes() {
           tabBarLabel: "Relatório",
           tabBarIcon: ({ focused }) => (
             <Image
-              source={require("../assets/imgs/TabImg/stats.png")}
+              source={_Stats}
               resizeMode="contain"
               style={{
                 width: 24,
@@ -95,7 +100,7 @@ export function TabRoutes() {
           tabBarLabel: "Notificação",
           tabBarIcon: ({ focused }) => (
             <Image
-              source={require("../assets/imgs/TabImg/notification.png")}
+              source={_Notification}
               resizeMode="contain"
               style={{
                 width: 24,
@@ -116,7 +121,7 @@ export function TabRoutes() {
           },
           tabBarIcon: ({ focused }) => (
             <Image
-              source={require("../assets/imgs/TabImg/settings.png")}
+              source={_Settings}
               resizeMode="contain"
               style={{
                 width: 24,
