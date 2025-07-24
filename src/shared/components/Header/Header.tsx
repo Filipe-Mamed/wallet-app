@@ -5,23 +5,28 @@ import {
   $header,
   $avatar,
   $appName,
+  $appNameRight,
   $status,
 } from "./Header.Styled";
 import { Button } from "../Button/Button";
 
+interface IImageIconBackProps {
+  source: ImageProps["source"];
+  style?: ImageProps["style"];
+}
+
 interface IHeaderProps {
-  name?: string;
+  nameLeft?: string;
+  nameRight?: string
   status?: string;
   avatar?: ImageSourcePropType
-  imgBack?: {
-    source: ImageProps["source"];
-    style?: ImageProps["style"];
-  };
+  imgBack?: IImageIconBackProps
   onPress?: () => void;
 }
 
 export function Header({
-  name,
+  nameLeft,
+  nameRight,
   status,
   imgBack,
   avatar,
@@ -31,7 +36,7 @@ export function Header({
     <View style={$container}>
       <View style={$contentHeader}>
         <View style={$header}>
-          {name && <Text style={$appName}>{name}</Text>}
+          {nameLeft && <Text style={$appName}>{nameLeft}</Text>}
           {status && <Text style={$status}>{status}</Text>}
           {imgBack && (
             <Button
@@ -41,6 +46,7 @@ export function Header({
             />
           )}
         </View>
+        {nameRight && <Text style={$appNameRight}>{nameRight}</Text>}
         <Image
           resizeMode="cover"
           style={$avatar}
