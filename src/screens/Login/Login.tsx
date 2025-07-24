@@ -48,9 +48,9 @@ export function Login() {
   };
 
   return (
-    <KeyboardAvoidingView behavior="position" enabled>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={$container}>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={$container}>
+        <KeyboardAvoidingView behavior="position" enabled>
           <View style={$header}>
             <Text style={$title}>Seja bem-vindo(a) {"\n"} a App Carteira</Text>
             <Text style={$description}>Entrar com</Text>
@@ -82,22 +82,22 @@ export function Login() {
               <Button variant="purple" children="Entrar" onPress={() => {}} />
             </View>
           </Form>
-          <View style={$footerGroup}>
-            <View style={$forgotPassword}>
-              <ForgotPassword onPress={handleForgotPassword} />
-            </View>
-            <View style={$footer}>
-              <Text style={$textFooter}>Não tem cadastro ainda?</Text>
-              <Button
-                style={$buttonFooter}
-                variant="transparent"
-                children="Cadastre-se"
-                onPress={handleRegister}
-              />
-            </View>
+        </KeyboardAvoidingView>
+        <View style={$footerGroup}>
+          <View style={$forgotPassword}>
+            <ForgotPassword onPress={handleForgotPassword} />
+          </View>
+          <View style={$footer}>
+            <Text style={$textFooter}>Não tem cadastro ainda?</Text>
+            <Button
+              style={$buttonFooter}
+              variant="transparent"
+              children="Cadastre-se"
+              onPress={handleRegister}
+            />
           </View>
         </View>
-      </TouchableWithoutFeedback>
-    </KeyboardAvoidingView>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }

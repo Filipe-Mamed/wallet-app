@@ -4,7 +4,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
   $container: {
-    height: "100%",
+    flex: 1,
     backgroundColor: "#F8F8FF",
     padding: RFValue(13),
     alignItems: "center",
@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     width: "auto",
     fontSize: RFValue(16),
     fontFamily: Fonts.Poppins_Regular,
-    textDecorationLine: "underline",
     color: "#0000FF",
     textDecorationColor: "#0000FF",
   },

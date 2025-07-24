@@ -26,9 +26,9 @@ export function RecoverPassword() {
   };
 
   return (
-    <KeyboardAvoidingView behavior="position" enabled>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <View style={$container}>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={$container}>
+        <KeyboardAvoidingView behavior="position" enabled>
           <View style={$header}>
             <Text style={$title}>Esqueceu sua senha?</Text>
             <Text style={$description}>
@@ -46,17 +46,17 @@ export function RecoverPassword() {
             />
             <Button variant="purple" children="Enviar" onPress={() => {}} />
           </View>
-          <View style={$footer}>
-            <Text style={$textFooter}>Lembrou a senha?</Text>
-            <Button
-              style={$buttonFooter}
-              variant="transparent"
-              children="Fazer login"
-              onPress={handleBackLogin}
-            />
-          </View>
+        </KeyboardAvoidingView>
+        <View style={$footer}>
+          <Text style={$textFooter}>Lembrou a senha?</Text>
+          <Button
+            style={$buttonFooter}
+            variant="transparent"
+            children="Fazer login"
+            onPress={handleBackLogin}
+          />
         </View>
-      </TouchableWithoutFeedback>
-    </KeyboardAvoidingView>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }

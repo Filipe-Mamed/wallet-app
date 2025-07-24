@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
     fontSize: RFValue(14),
     fontFamily: Fonts.Poppins_Regular,
     color: "#0000FF",
-    textDecorationLine: "underline",
     textDecorationColor: "#0000FF",
   },
 });

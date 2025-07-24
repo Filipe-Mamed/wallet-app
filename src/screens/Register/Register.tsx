@@ -28,9 +28,9 @@ export function Register() {
   };
 
   return (
-    <KeyboardAvoidingView behavior="position" enabled>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={$container}>
+          <KeyboardAvoidingView behavior="position" enabled>
           <View style={$header}>
             <Text style={$title}>
               Ao se registrar, sinta imediatamente a facilidade de realizar
@@ -69,6 +69,7 @@ export function Register() {
           <View style={$buttonEntrar}>
             <Button variant="purple" children="Cadastrar" onPress={() => {}} />
           </View>
+          </KeyboardAvoidingView>
           <View style={$footer}>
             <Text style={$textFooter}>Já tem cadastro?</Text>
             <Button
@@ -80,6 +81,5 @@ export function Register() {
           </View>
         </View>
       </TouchableWithoutFeedback>
-    </KeyboardAvoidingView>
   );
 }
