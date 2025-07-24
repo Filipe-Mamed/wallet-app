@@ -4,7 +4,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
   $container: {
-    height: "100%",
+    flex: 1,
     backgroundColor: "#F8F8FF",
   },
   $contentCard:{
@@ -12,7 +12,12 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  $body:{}
+  $body:{
+  },
+  $footer:{
+    marginTop: RFValue(2),
+    flex: 1,
+  }
 });
 
-export const { $container, $contentCard, $body } = styles;
+export const { $container, $contentCard, $body, $footer } = styles;
