@@ -7,8 +7,8 @@ const styles = StyleSheet.create({
     padding: RFValue(10),
   },
   $icons: {
-    width: RFValue(40),
-    height: RFValue(40),
+    width: RFValue(33),
+    height: RFValue(33),
     tintColor: "#4B0082",
   },
   $iconNames: {
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     gap: RFValue(10),
   },
   $name: {
-    color: "#4B0082",
+    color: "#8438FF",
     fontSize: RFValue(13),
     fontFamily: Fonts.Poppins_Medium,
   },
