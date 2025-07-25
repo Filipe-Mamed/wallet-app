@@ -7,9 +7,19 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#F8F8FF",
   },
-  $text: {
-    textAlign: "center",
+  $body:{
+    padding: RFValue(20),
+    gap: RFValue(26),
   },
+  $footer:{
+    marginTop: RFValue(28),
+    gap: RFValue(5),
+  }
+  
 });
 
-export const { $container, $text } = styles;
+export const {
+  $container,
+  $body,
+  $footer
+} = styles;
