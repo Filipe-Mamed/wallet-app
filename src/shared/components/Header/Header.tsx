@@ -1,4 +1,11 @@
-import { View, Text, Image, ImageProps, ImageSourcePropType } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ImageProps,
+  ImageSourcePropType,
+} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import {
   $container,
   $contentHeader,
@@ -7,6 +14,7 @@ import {
   $appName,
   $appNameRight,
   $status,
+  $flexRow,
 } from "./Header.Styled";
 import { Button } from "../Button/Button";
 
@@ -17,11 +25,10 @@ interface IImageIconBackProps {
 
 interface IHeaderProps {
   nameLeft?: string;
-  nameRight?: string
+  nameRight?: string;
   status?: string;
-  avatar?: ImageSourcePropType
-  imgBack?: IImageIconBackProps
-  onPress?: () => void;
+  avatar?: ImageSourcePropType;
+  imgBack?: IImageIconBackProps;
 }
 
 export function Header({
@@ -30,28 +37,32 @@ export function Header({
   status,
   imgBack,
   avatar,
-  onPress,
 }: IHeaderProps) {
+  const navigation = useNavigation();
+
+  const handleGoBack = () => {
+    navigation.goBack();
+  };
+
   return (
     <View style={$container}>
       <View style={$contentHeader}>
         <View style={$header}>
           {nameLeft && <Text style={$appName}>{nameLeft}</Text>}
           {status && <Text style={$status}>{status}</Text>}
-          {imgBack && (
-            <Button
-              onPress={() => onPress}
-              variant="transparent"
-              imgIcon={imgBack}
-            />
-          )}
+          <View style={$flexRow}>
+            {imgBack && (
+              <Button
+                onPress={handleGoBack}
+                variant="transparent"
+                imgIcon={imgBack}
+                style={{ width: "auto"}}
+              />
+            )}
+            {nameRight && <Text style={$appNameRight}>{nameRight}</Text>}
+          </View>
         </View>
-        {nameRight && <Text style={$appNameRight}>{nameRight}</Text>}
-        <Image
-          resizeMode="cover"
-          style={$avatar}
-          source={avatar}
-        />
+        <Image resizeMode="cover" style={$avatar} source={avatar} />
       </View>
     </View>
   );

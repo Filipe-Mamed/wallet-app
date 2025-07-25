@@ -32,6 +32,11 @@ const styles = StyleSheet.create({
     color: "#808080",
     fontSize: RFValue(13),
   },
+  $flexRow:{
+    flexDirection: "row",
+    alignItems: "center",
+    gap: RFValue(10),
+  }
 });
 
 export const {
@@ -42,4 +47,5 @@ export const {
   $appName,
   $appNameRight,
   $status,
+  $flexRow,
 } = styles;
