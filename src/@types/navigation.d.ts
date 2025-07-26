@@ -1,5 +1,6 @@
 interface ScreenRoutesParamList{
   Profile: undefined
+  AddCard: undefined
 }
 
 export declare global {
