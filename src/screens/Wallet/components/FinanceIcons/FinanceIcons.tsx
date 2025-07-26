@@ -12,8 +12,15 @@ import Transfer from "../../../../assets/imgs/IconsWallet/transferencia-de-dinhe
 import Payment from "../../../../assets/imgs/IconsWallet/pagar.png";
 import Receive from "../../../../assets/imgs/IconsWallet/receber-dinheiro.png";
 import ToAdd from "../../../../assets/imgs/IconsWallet/botao-adicionar.png";
+import { useNavigation } from "@react-navigation/native";
 
 export function FinanceIcons() {
+  const navigation = useNavigation();
+
+  const handleAddCard = () => {
+    navigation.navigate("Screen", { screen: "AddCard" });
+  };
+
   return (
     <View style={$financeIcons}>
       <View style={$botao}>
@@ -36,10 +43,10 @@ export function FinanceIcons() {
           <Text style={$name}>Receber</Text>
         </View>
         <View style={$iconNames}>
-          <TouchableOpacity style={$shadowButton}>
+          <TouchableOpacity onPress={handleAddCard} style={$shadowButton}>
             <Image style={$icons} source={ToAdd} />
           </TouchableOpacity>
-          <Text style={$name}>Mais Opções</Text>
+          <Text style={$name}>Add Cartão</Text>
         </View>
       </View>
     </View>
