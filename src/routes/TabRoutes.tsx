@@ -19,7 +19,7 @@ const { Navigator, Screen } = createBottomTabNavigator();
 export function TabRoutes() {
   return (
     <Navigator
-      initialRouteName="Settings"
+      initialRouteName="Wallet"
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: true,
