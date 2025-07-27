@@ -2,6 +2,7 @@ interface ScreenRoutesParamList {
   Profile: undefined;
   AddCard: undefined;
   CardDetails: undefined;
+  AllTransactions: undefined
 }
 
 export declare global {
