@@ -4,13 +4,53 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
   $container: {
-    height: "100%",
+    flex: 1,
     backgroundColor: "#F8F8FF",
   },
-  $text: {
-    textAlign: "center",
-    marginTop: RFValue(300),
+  $stats: {
+    alignItems: "center",
+    justifyContent: "center",
+    gap: RFValue(20),
+  },
+  $imgStatistics: {
+    width: RFValue(340),
+    height: RFValue(240),
+    resizeMode: "contain",
+  },
+  $number: {
+    position: "absolute",
+    right: RFValue(148),
+    bottom: RFValue(150),
+    fontFamily: Fonts.Poppins_Regular,
+    fontSize: RFValue(14),
+    color: "#FFFFFF",
+  },
+  $contentBalance: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  $textBalance: {
+    color: "#A9A9A9",
+    fontFamily: Fonts.Poppins_Regular,
+    fontSize: RFValue(18),
+  },
+  $balanceValue: {
+    color: "#8438FF",
+    fontFamily: Fonts.Poppins_SemiBold,
+    fontSize: RFValue(34),
+  },
+  $paddingBottom: {
+    paddingBottom: RFValue(80),
   },
 });
 
-export const { $container, $text } = styles;
+export const {
+  $container,
+  $stats,
+  $imgStatistics,
+  $number,
+  $contentBalance,
+  $textBalance,
+  $balanceValue,
+  $paddingBottom,
+} = styles;
