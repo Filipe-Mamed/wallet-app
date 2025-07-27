@@ -1,6 +1,7 @@
-interface ScreenRoutesParamList{
-  Profile: undefined
-  AddCard: undefined
+interface ScreenRoutesParamList {
+  Profile: undefined;
+  AddCard: undefined;
+  CardDetails: undefined;
 }
 
 export declare global {
@@ -12,10 +13,10 @@ export declare global {
       RecoverPassword: undefined;
 
       // Telas
-      Screen:{
-        screen: keyof ScreenRoutesParamList
+      Screen: {
+        screen: keyof ScreenRoutesParamList;
         params?: ScreenRoutesParamList[keyof ScreenRoutesParamList];
-      }
+      };
     }
   }
 }
