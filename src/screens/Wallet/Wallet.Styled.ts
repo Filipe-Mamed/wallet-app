@@ -17,7 +17,10 @@ const styles = StyleSheet.create({
   $footer:{
     marginTop: RFValue(2),
     flex: 1,
+  },
+  $paddingBottom: {
+    paddingBottom: RFValue(80),
   }
 });
 
-export const { $container, $contentCard, $body, $footer } = styles;
+export const { $container, $contentCard, $body, $footer, $paddingBottom } = styles;

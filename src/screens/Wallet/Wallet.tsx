@@ -5,22 +5,30 @@ import {
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
 } from "react-native";
-import { $container, $contentCard, $body, $footer } from "./Wallet.Styled";
-import { Header } from "../../shared/components";
+import {
+  $container,
+  $contentCard,
+  $body,
+  $footer,
+  $paddingBottom,
+} from "./Wallet.Styled";
+import { Header, Transaction } from "../../shared/components";
 import { CardWallet } from "./components/CardWallet";
 import { FinanceIcons } from "./components/FinanceIcons";
-import { Transaction } from "./components/Transaction";
 
 import FotoIlustrativa from "../../assets/imgs/foto-ilustrativa.jpg";
+import { useNavigation } from "@react-navigation/native";
 
 export function Wallet() {
+  const navigation = useNavigation();
+
+  const handleAllTransactions = () => {
+    navigation.navigate("Screen", { screen: "AllTransactions" });
+  };
+
   return (
     <View style={$container}>
-      <Header
-        nameLeft="Carteira"
-        status="Ativo"
-        avatar={FotoIlustrativa}
-      />
+      <Header nameLeft="Carteira" status="Ativo" avatar={FotoIlustrativa} />
       <View style={$contentCard}>
         <CardWallet />
       </View>
@@ -28,7 +36,13 @@ export function Wallet() {
         <FinanceIcons />
       </View>
       <View style={$footer}>
-        <Transaction />
+        <Transaction
+          topic="Últimas Transações"
+          title="Ver tudo"
+          onPress={handleAllTransactions}
+          limit={6}
+          paddingBottom={$paddingBottom}
+        />
       </View>
     </View>
   );
