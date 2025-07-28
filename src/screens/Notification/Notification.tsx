@@ -1,16 +1,16 @@
-import {
-  Text,
-  View,
-  Keyboard,
-  KeyboardAvoidingView,
-  TouchableWithoutFeedback,
-} from "react-native";
-import { $container, $text } from "./Notification.Styled";
+import { Text, View } from "react-native";
+import { $container, $body } from "./Notification.Styled";
+import { Header } from "../../shared/components";
+import { Content } from "./components/Content";
 
 export function Notification() {
   return (
     <View style={$container}>
-      <Text style={$text}>Notification</Text>
+      <Header nameLeft="Notificações" />
+      <View style={$body}>
+        <Content top title="Novo" />
+        <Content bottom title="Recente" />
+      </View>
     </View>
   );
 }
