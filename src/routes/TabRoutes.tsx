@@ -19,7 +19,7 @@ const { Navigator, Screen } = createBottomTabNavigator();
 export function TabRoutes() {
   return (
     <Navigator
-      initialRouteName="Stats"
+      initialRouteName="Notification"
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: true,
