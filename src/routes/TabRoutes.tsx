@@ -4,10 +4,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { RFValue } from "react-native-responsive-fontsize";
 import { Fonts } from "../shared/styles";
 
-import _Home from "../assets/imgs/TabImg/home.png"
-import _Stats from "../assets/imgs/TabImg/stats.png"
-import _Notification from "../assets/imgs/TabImg/notification.png"
-import _Settings from "../assets/imgs/TabImg/settings.png"
+import _Home from "../assets/imgs/TabImg/home.png";
+import _Stats from "../assets/imgs/TabImg/stats.png";
+import _Notification from "../assets/imgs/TabImg/notification.png";
+import _Settings from "../assets/imgs/TabImg/settings.png";
+import _Wallet from "../assets/imgs/TabImg/wallet_.png";
 
 import { Wallet } from "../screens/Wallet";
 import { Stats } from "../screens/Stats";
@@ -19,7 +20,7 @@ const { Navigator, Screen } = createBottomTabNavigator();
 export function TabRoutes() {
   return (
     <Navigator
-      initialRouteName="Notification"
+      initialRouteName="Wallet"
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: true,
@@ -57,14 +58,14 @@ export function TabRoutes() {
         name="Wallet"
         component={Wallet}
         options={{
-          tabBarLabel: "Início",
+          tabBarLabel: "Carteira",
           tabBarItemStyle: {
             marginRight: -10,
             marginLeft: -9,
           },
           tabBarIcon: ({ focused }) => (
             <Image
-              source={_Home}
+              source={_Wallet}
               resizeMode="contain"
               style={{
                 width: 24,
