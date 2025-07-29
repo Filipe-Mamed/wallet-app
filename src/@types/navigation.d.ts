@@ -2,7 +2,7 @@ interface ScreenRoutesParamList {
   Profile: undefined;
   AddCard: undefined;
   CardDetails: undefined;
-  AllTransactions: undefined
+  AllTransactions: undefined;
 }
 
 export declare global {
@@ -12,6 +12,9 @@ export declare global {
       Login: undefined;
       Register: undefined;
       RecoverPassword: undefined;
+
+      // Tabs
+      Main: undefined;
 
       // Telas
       Screen: {
