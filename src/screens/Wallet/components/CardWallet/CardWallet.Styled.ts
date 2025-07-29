@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#4B0082",
     width: "100%",
     height: RFValue(140),
-    borderRadius: 60,
+    borderRadius: RFValue(50),
   },
   $coreContent: {
     flexDirection: "row",
@@ -39,6 +39,19 @@ const styles = StyleSheet.create({
     color: "#F8F8FF",
     fontFamily: Fonts.Poppins_Bold,
     fontSize: RFValue(20),
+    zIndex: 1
+  },
+  $ellipse1: {
+    resizeMode: "contain",
+    position: "absolute",
+    bottom: 93,
+    left: 14
+  },
+  $ellipse2: {
+    resizeMode: "contain",
+    position: "absolute",
+    left: 57,
+    top: 21
   },
 });
 
@@ -51,4 +64,6 @@ export const {
   $contentCard,
   $card,
   $flag,
+  $ellipse1,
+  $ellipse2,
 } = styles;
