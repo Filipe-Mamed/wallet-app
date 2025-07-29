@@ -31,10 +31,9 @@ import { useCallback, useRef } from "react";
 import { ForgotPassword } from "./components/ForgotPassword/ForgotPassword";
 import { useNavigation } from "@react-navigation/native";
 
-import User from "../../assets/imgs/InputsImgs/do-utilizador.png"
-import Lock from "../../assets/imgs/InputsImgs/trancar.png"
-import OpenEye from "../../assets/imgs/InputsImgs/olho-aberto.png"
-
+import User from "../../assets/imgs/InputsImgs/do-utilizador.png";
+import Lock from "../../assets/imgs/InputsImgs/trancar.png";
+import OpenEye from "../../assets/imgs/InputsImgs/olho-aberto.png";
 
 export function Login() {
   const formRef = useRef<FormHandles>(null);
@@ -50,6 +49,10 @@ export function Login() {
 
   const handleForgotPassword = () => {
     navigation.navigate("RecoverPassword");
+  };
+
+  const handleMain = () => {
+    navigation.navigate("Main");
   };
 
   return (
@@ -84,7 +87,7 @@ export function Login() {
               rightImg={OpenEye}
             />
             <View style={$buttonEntrar}>
-              <Button variant="purple" children="Entrar" onPress={() => {}} />
+              <Button variant="purple" children="Entrar" onPress={handleMain} />
             </View>
           </Form>
         </KeyboardAvoidingView>
