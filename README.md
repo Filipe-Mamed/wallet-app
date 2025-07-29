@@ -20,6 +20,10 @@ Um aplicativo mobile para gerenciar suas finanças, construído com React Native
 - React Navigation
 - StyleSheet
 
+## Demostração do Projeto
+
+![Imagem](./src//assets//imgs//Apresetacao.jpg)
+
 ## Primeiros Passos
 
 ### Pré-requisitos
