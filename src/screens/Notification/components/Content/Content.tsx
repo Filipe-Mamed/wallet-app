@@ -11,6 +11,7 @@ import {
   $rowStyle,
   $subTitle,
   $type,
+  $badge,
 } from "./Content.Styled";
 
 import { new_notifications } from "../../../../shared/utils";
@@ -28,7 +29,7 @@ interface IContentProps {
 export function Content({ top, bottom, title }: IContentProps) {
   const [arrowStates, setArrowStates] = useState<Record<string, boolean>>({});
 
-  function handleColor(id: string) {
+  function handleArrowStates(id: string) {
     setArrowStates((prev) => ({
       ...prev,
       [id]: !prev[id],
@@ -46,13 +47,14 @@ export function Content({ top, bottom, title }: IContentProps) {
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
               <View style={$flatList}>
+                {!arrowStates[item.id] && <View style={$badge} />}
                 <View style={$rowStyle}>
                   <View style={$contentList}>
                     <Text style={$type}>{item.datetime}</Text>
                     <Text style={$subTitle}>{item.title}</Text>
                     <Text style={$type}>{item.type}</Text>
                   </View>
-                  <TouchableOpacity onPress={() => handleColor(item.id)}>
+                  <TouchableOpacity onPress={() => handleArrowStates(item.id)}>
                     <Image
                       source={arrowStates[item.id] ? DownArrow : UpArrow}
                       style={[

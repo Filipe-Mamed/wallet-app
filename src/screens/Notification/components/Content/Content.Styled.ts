@@ -58,6 +58,15 @@ const styles = StyleSheet.create({
     fontSize: RFValue(12),
     color: "#A9A9A9",
   },
+  $badge: {
+    backgroundColor: "#FF0000",
+    width: RFValue(9),
+    height: RFValue(9),
+    borderRadius: RFValue(10),
+    position: "absolute",
+    left: 326,
+    top: 0,
+  },
 });
 
 export const {
@@ -70,4 +79,5 @@ export const {
   $rowStyle,
   $subTitle,
   $type,
+  $badge,
 } = styles;
