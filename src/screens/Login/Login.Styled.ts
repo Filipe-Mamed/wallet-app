@@ -1,38 +1,88 @@
 import { StyleSheet } from "react-native";
 import { Fonts } from "../../shared/styles";
-import {RFValue} from "react-native-responsive-fontsize"
+import { RFValue } from "react-native-responsive-fontsize";
 
-export const styles = StyleSheet.create({
-  container: {
+const styles = StyleSheet.create({
+  $container: {
     flex: 1,
     backgroundColor: "#F8F8FF",
-    padding: RFValue(13)
+    padding: RFValue(13),
   },
-  header: {
+  $header: {
     padding: RFValue(20),
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "space-between",
   },
-  title: {
+  $title: {
     color: "black",
     fontFamily: Fonts.Poppins_Medium,
     marginTop: RFValue(40),
     fontSize: RFValue(25),
-    textAlign: "center"
+    textAlign: "center",
   },
-  description: {
+  $description: {
     color: "black",
     fontFamily: Fonts.Poppins_Light,
-    marginTop: RFValue(60),
-    fontSize: RFValue(15)
+    marginTop: RFValue(50),
+    fontSize: RFValue(15),
   },
-  buttonGroup: {
+  $buttonGroup: {
     flexDirection: "row",
     gap: RFValue(20),
     marginTop: RFValue(15),
   },
-  main:{
+  $main: {
+    gap: RFValue(10),
+    marginTop: RFValue(20),
+  },
+  $buttonEntrar: {
+    marginTop: RFValue(20),
     gap: RFValue(10),
   },
-  footer:{}
+  $footerGroup: {
+    gap: RFValue(9),
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: RFValue(40),
+  },
+  $forgotPassword: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: RFValue(5),
+  },
+  $footer: {
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: RFValue(5),
+  },
+  $textFooter: {
+    fontSize: RFValue(16),
+    fontFamily: Fonts.Poppins_Regular,
+    color: "#808080",
+  },
+  $buttonFooter: {
+    width: "auto",
+    fontSize: RFValue(16),
+    fontFamily: Fonts.Poppins_Regular,
+    color: "#0000FF",
+    textDecorationColor: "#0000FF",
+  },
 });
+
+export const {
+  $container,
+  $header,
+  $title,
+  $description,
+  $buttonGroup,
+  $main,
+  $buttonEntrar,
+  $footerGroup,
+  $forgotPassword,
+  $footer,
+  $textFooter,
+  $buttonFooter,
+} = styles;
